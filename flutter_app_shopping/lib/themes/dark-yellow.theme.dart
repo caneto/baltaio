@@ -37,7 +37,7 @@ ThemeData darkYellowTheme() {
     // primaryTextTheme:
     // sliderTheme:
     primaryColor: primaryColor,
-    accentColor: Colors.black26,
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.black26),
     // fontFamily: 'Montserrat',
     // buttonColor: Color(0xFF00C569),
     // // scaffoldBackgroundColor: backgroundColor,

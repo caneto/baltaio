@@ -55,11 +55,11 @@ class CartPage extends StatelessWidget {
                   margin: EdgeInsets.only(
                     right: 20,
                   ),
-                  child: FlatButton(
+                  child: TextButton(
                     child: Text(
                       "Checkout",
                       style: TextStyle(
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
                     onPressed: () => {},
@@ -134,7 +134,7 @@ Widget productItem(context) {
                     Container(
                       width: 40,
                       alignment: Alignment.center,
-                      child: FlatButton(
+                      child: TextButton(
                         child: Text("+"),
                         onPressed: () => {},
                       ),
@@ -147,7 +147,7 @@ Widget productItem(context) {
                     Container(
                       width: 40,
                       alignment: Alignment.center,
-                      child: FlatButton(
+                      child: TextButton(
                         child: Text("-"),
                         onPressed: () => {},
                       ),

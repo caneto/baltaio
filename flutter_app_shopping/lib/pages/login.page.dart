@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/signup.page.dart';
 
+// ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   String _email;
@@ -22,7 +23,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 height: 480,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -49,15 +50,15 @@ class LoginPage extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "Welcome",
-                                  style: Theme.of(context).textTheme.display2,
+                                  style: Theme.of(context).textTheme.headline3,
                                 ),
                                 Text(
                                   "Sign in to continue",
-                                  style: Theme.of(context).textTheme.subhead,
+                                  style: Theme.of(context).textTheme.subtitle1,
                                 ),
                               ],
                             ),
-                            FlatButton(
+                            TextButton(
                               child: Text(
                                 "Sign Up",
                                 style: TextStyle(
@@ -131,7 +132,7 @@ class LoginPage extends StatelessWidget {
                         Container(
                           height: 40,
                           alignment: Alignment.centerRight,
-                          child: FlatButton(
+                          child: TextButton(
                             child: Text(
                               "Forgot your password?",
                               style: TextStyle(
@@ -152,7 +153,7 @@ class LoginPage extends StatelessWidget {
                               Radius.circular(5),
                             ),
                           ),
-                          child: FlatButton(
+                          child: TextButton(
                             child: Text(
                               "Sign In",
                               style: TextStyle(
@@ -165,7 +166,7 @@ class LoginPage extends StatelessWidget {
                                 print(_email);
                                 print(_password);
 
-                                Scaffold.of(context).showSnackBar(
+                                ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text('Welcome, $_email'),
                                   ),
@@ -201,7 +202,7 @@ class LoginPage extends StatelessWidget {
                     Radius.circular(5),
                   ),
                 ),
-                child: FlatButton(
+                child: TextButton(
                   child: Row(
                     children: <Widget>[
                       Container(
@@ -232,7 +233,7 @@ class LoginPage extends StatelessWidget {
                     Radius.circular(5),
                   ),
                 ),
-                child: FlatButton(
+                child: TextButton(
                   child: Row(
                     children: <Widget>[
                       Container(

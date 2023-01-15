@@ -36,7 +36,7 @@ class _SearchBoxState extends State<SearchBox>
         AnimatedInput(
           controller: _controller,
         ),
-        FlatButton(
+        TextButton(
           onPressed: () {
             !menuOpened ? _controller.forward() : _controller.reverse();
             menuOpened = !menuOpened;

@@ -41,7 +41,7 @@ class SignupPage extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "Signup",
-                        style: Theme.of(context).textTheme.display2,
+                        style: Theme.of(context).textTheme.headline3,
                       ),
                       SizedBox(
                         height: 60,
@@ -112,7 +112,7 @@ class SignupPage extends StatelessWidget {
                             Radius.circular(5),
                           ),
                         ),
-                        child: FlatButton(
+                        child: TextButton(
                           child: Text(
                             "Signup",
                             style: TextStyle(

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/themes/dark-yellow.theme.dart';
-import 'package:shopping/themes/dark.theme.dart';
 import 'package:shopping/themes/light.theme.dart';
 import 'pages/tabs.page.dart';
 

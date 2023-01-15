@@ -13,15 +13,15 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             SizedBox(
-              height: 60,
+              height: 40,
             ),
             SearchBox(),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Text(
               "Categories",
-              style: Theme.of(context).textTheme.headline,
+              style: Theme.of(context).textTheme.headline2,
             ),
             SizedBox(
               height: 10,
@@ -38,9 +38,9 @@ class HomePage extends StatelessWidget {
               children: <Widget>[
                 Text(
                   "Best Selling",
-                  style: Theme.of(context).textTheme.headline,
+                  style: Theme.of(context).textTheme.headline3,
                 ),
-                FlatButton(
+                TextButton(
                   child: Text("See All"),
                   onPressed: () => {},
                 ),

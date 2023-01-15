@@ -37,8 +37,8 @@ ThemeData lightTheme() {
     // primaryIconTheme:
     // primaryTextTheme:
     // sliderTheme:
-    primaryColor: primaryColor,
-    accentColor: Colors.white,
+    primaryColor: primaryColor, 
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white),
     // fontFamily: 'Montserrat',
     // buttonColor: Color(0xFF00C569),
     // // scaffoldBackgroundColor: backgroundColor,
