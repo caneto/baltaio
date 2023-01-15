@@ -1,16 +1,13 @@
-# shopping
+# UI de Shopping em Flutter
 
-A new Flutter project.
+Feito no curso do Baita.io
 
-## Getting Started
+- [Me apoie no Patreon](https://patreon.com/carlosalbertopinto?fan_landing=true)
 
-This project is a starting point for a Flutter application.
+<h2>🛠️ Funcionalidades e Componentes usados</h2>
 
-A few resources to get you started if this is your first Flutter project:
+- flutter 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  flutter_launcher_icons: 0.7.2
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+
