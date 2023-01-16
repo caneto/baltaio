@@ -4,8 +4,8 @@ import 'package:shopping/pages/signup.page.dart';
 // ignore: must_be_immutable
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
-  String _email;
-  String _password;
+  String? _email;
+  String? _password;
 
   @override
   Widget build(BuildContext context) {
@@ -95,12 +95,12 @@ class LoginPage extends StatelessWidget {
                             color: Theme.of(context).primaryColor,
                           ),
                           validator: (value) {
-                            if (value.isEmpty) {
+                            if (value!.isEmpty) {
                               return 'Invalid E-mail';
                             }
                             return null;
                           },
-                          onSaved: (input) => _email = input,
+                          onSaved: (input) => _email = input!,
                         ),
                         SizedBox(
                           height: 10,
@@ -122,12 +122,12 @@ class LoginPage extends StatelessWidget {
                             color: Theme.of(context).primaryColor,
                           ),
                           validator: (value) {
-                            if (value.isEmpty) {
+                            if (value!.isEmpty) {
                               return 'Invalid Password';
                             }
                             return null;
                           },
-                          onSaved: (input) => _password = input,
+                          onSaved: (input) => _password = input!,
                         ),
                         Container(
                           height: 40,
@@ -161,8 +161,8 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                             onPressed: () {
-                              if (_formKey.currentState.validate()) {
-                                _formKey.currentState.save();
+                              if (_formKey.currentState!.validate()) {
+                                _formKey.currentState!.save();
                                 print(_email);
                                 print(_password);
 

@@ -8,7 +8,7 @@ class SearchBox extends StatefulWidget {
 
 class _SearchBoxState extends State<SearchBox>
     with SingleTickerProviderStateMixin {
-  AnimationController _controller;
+  late AnimationController _controller;
   bool menuOpened = false;
 
   @override

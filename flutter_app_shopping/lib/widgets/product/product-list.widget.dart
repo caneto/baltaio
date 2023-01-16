@@ -4,7 +4,7 @@ import 'package:shopping/widgets/product/product-card.widget.dart';
 class ProductList extends StatelessWidget {
   final Axis scrollDirection;
 
-  ProductList({@required this.scrollDirection});
+  ProductList({required this.scrollDirection});
 
   @override
   Widget build(BuildContext context) {

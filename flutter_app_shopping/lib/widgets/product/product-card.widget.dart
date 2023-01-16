@@ -8,10 +8,10 @@ class ProductCard extends StatelessWidget {
   final double price;
 
   ProductCard({
-    @required this.image,
-    @required this.title,
-    @required this.description,
-    @required this.price,
+    required this.image,
+    required this.title,
+    required this.description,
+    required this.price,
   });
 
   @override

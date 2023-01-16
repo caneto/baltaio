@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CategoryItem extends StatelessWidget {
   final String image;
 
-  CategoryItem({@required this.image});
+  CategoryItem({required this.image});
 
   @override
   Widget build(BuildContext context) {

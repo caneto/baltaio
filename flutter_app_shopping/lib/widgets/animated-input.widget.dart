@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class AnimatedInput extends StatelessWidget {
   final AnimationController controller;
-  final Animation<Color> containerColorAnim;
+  final Animation<Color?> containerColorAnim;
   final Animation<double> containerOpacityAnim;
   final Animation<double> containerBorderRadiusAnim;
   final Animation<double> containerSizeAnim;
 
-  AnimatedInput({this.controller})
+  AnimatedInput({required this.controller})
       : containerOpacityAnim = Tween(
           begin: 0.0,
           end: 1.0,
