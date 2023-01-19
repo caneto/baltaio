@@ -23,6 +23,6 @@ class ProductRepository {
   Future<ProductDetailsModel> get(String tag) async {
     var url = "${Settings.apiUrl}v1/products/$tag";
     Response response = await Dio().get(url);
-    return ProductDetailsModel.fromJson(response.data);
+    return ProductDetailsModel.fromMap(response.data);
   }
 }

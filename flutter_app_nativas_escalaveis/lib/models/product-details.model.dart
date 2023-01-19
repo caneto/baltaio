@@ -45,7 +45,7 @@ class ProductDetailsModel {
       price: (map["price"] ?? 0.0) as double,
       description: (map["description"] ?? '') as String,
       brand: (map["brand"] ?? '') as String,
-      images: List<String>.from(((map['images'] ?? const <String>[]) as List<String>),),
+      images: List<String>.from(((map['images'] ?? const <String>[])),),
       category: CategoryModel.fromMap((map["category"]?? Map<String,dynamic>.from({})) as Map<String,dynamic>),
     );
   }

@@ -20,8 +20,8 @@ class CartItem extends StatelessWidget {
       child: Row(
         children: <Widget>[
           Container(
-            width: 100,
-            height: 100,
+            width: 90,
+            height: 90,
             margin: EdgeInsets.all(10),
             child: Image.network(
               item.image,
@@ -31,7 +31,7 @@ class CartItem extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(
               top: 20,
-              left: 10,
+              left: 6,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
