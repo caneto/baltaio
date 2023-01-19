@@ -8,9 +8,9 @@ Feito no curso do Baita.io
 
 - flutter 
 
-  provider: 6.0.5
-  dio: 4.0.6
-  intl: 0.17.0
-  shared_preference: 2.0.16
+  provider: 6.0.5<br/>
+  dio: 4.0.6<br/>
+  intl: 0.17.0<br/>
+  shared_preference: 2.0.16<br/>
 
 
