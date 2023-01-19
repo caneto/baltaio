@@ -1,16 +1,16 @@
-# shopping
+# App Nativo Escalavel usado de Shopping em Flutter
 
-A new Flutter project.
+Feito no curso do Baita.io
 
-## Getting Started
+- [Me apoie no Patreon](https://patreon.com/carlosalbertopinto?fan_landing=true)
 
-This project is a starting point for a Flutter application.
+<h2>🛠️ Funcionalidades e Componentes usados</h2>
 
-A few resources to get you started if this is your first Flutter project:
+- flutter 
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+  provider: 6.0.5
+  dio: 4.0.6
+  intl: 0.17.0
+  shared_preference: 2.0.16
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
