@@ -16,7 +16,7 @@ class ProductRepository {
     var url = "${Settings.apiUrl}v1/categories/$category/products";
     Response response = await Dio().get(url);
     return (response.data as List)
-        .map((course) => ProductListItemModel.fromJson(course))
+        .map((course) => ProductListItemModel.fromMap(course))
         .toList();
   }
 
