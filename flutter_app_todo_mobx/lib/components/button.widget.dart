@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class TDButton extends StatelessWidget {
   final String text;
-  final String image;
-  final Function callback;
-  final double width;
+  final String? image;
+  final VoidCallback callback;
+  final double? width;
 
   TDButton({
-    @required this.text,
-    @required this.callback,
+    required this.text,
+    required this.callback,
     this.image,
     this.width,
   });
@@ -18,14 +18,14 @@ class TDButton extends StatelessWidget {
     return Container(
       color: Theme.of(context).primaryColor,
       width: width != null ? width : 250,
-      child: FlatButton(
+      child: TextButton(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             image != null
                 ? Image.asset(
-                    image,
+                    image!,
                     width: 32,
                   )
                 : SizedBox(),

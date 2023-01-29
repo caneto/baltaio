@@ -4,7 +4,7 @@ class TDAvatar extends StatelessWidget {
   final String path;
   final double width;
 
-  TDAvatar({@required this.path, @required this.width});
+  TDAvatar({required this.path, required this.width});
 
   @override
   Widget build(BuildContext context) {
