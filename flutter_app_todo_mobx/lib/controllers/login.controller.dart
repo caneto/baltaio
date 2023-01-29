@@ -18,15 +18,12 @@ class LoginController {
 
     final userCredential  = await _auth.signInWithCredential(credential);
     
-    final User? user = userCredential.user;
-
     var token = await user.getIdToken();
 
-    
+    user.name = userCredential.user!.displayName!;
+    user.email = userCredential.user!.email!;
+    user.picture = userCredential.user!.photoURL!;
 
-    user..displayName = userCredential.user!.displayName;
-    user.email = firebaseUser.email;
-    user.picture = firebaseUser.photoUrl;
     user.token = token.token;
   }
 
