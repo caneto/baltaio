@@ -1,24 +1,33 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 class TodoItem {
-  String id;
-  String title;
-  bool done;
-  DateTime date; // Alterado
+  final String id;
+  final String title;
+  final bool done;
+  final DateTime date; // Alterado
 
-  TodoItem({this.id, this.title, this.done, this.date});
+  TodoItem({required this.id, required this.title, required this.done, required this.date});
 
-  TodoItem.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    title = json['title'];
-    done = json['done'];
-    date = DateTime.parse(json['date']); // Alterado
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'id': id,
+      'title': title,
+      'done': done,
+      'date': date.millisecondsSinceEpoch,
+    };
   }
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['done'] = this.done;
-    data['date'] = this.date.toString().substring(0, 10); // Alterado
-    return data;
+  factory TodoItem.fromMap(Map<String, dynamic> map) {
+    return TodoItem(
+      id: (map["id"] ?? '') as String,
+      title: (map["title"] ?? '') as String,
+      done: (map["done"] ?? false) as bool,
+      date: DateTime.fromMillisecondsSinceEpoch((map["date"]??0) as int),
+    );
   }
+
+  String toJson() => json.encode(toMap());
+
+  factory TodoItem.fromJson(String source) => TodoItem.fromMap(json.decode(source) as Map<String, dynamic>);
 }

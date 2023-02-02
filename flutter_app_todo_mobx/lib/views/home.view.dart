@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.controller.dart';
+import 'package:todo/repositories/todo.repository.dart';
 import 'package:todo/stores/app.store.dart';
 import 'package:todo/views/create-todo.view.dart';
 import 'package:todo/widgets/navbar.widget.dart';
@@ -11,7 +12,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<AppStore>(context);
-    final controller = new TodoController(store);
+    final repository = TodoRepository();
+    final controller = TodoController(store: store, repository: repository);
 
     // Só ocorre na primeira vez que o App rodar
     if (store.currentState == "none") {

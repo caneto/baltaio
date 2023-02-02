@@ -18,13 +18,12 @@ class LoginController {
 
     final userCredential  = await _auth.signInWithCredential(credential);
     
-    var token = await user.getIdToken();
+    var token = await _auth.currentUser!.getIdToken();    
 
     user.name = userCredential.user!.displayName!;
     user.email = userCredential.user!.email!;
     user.picture = userCredential.user!.photoURL!;
-
-    user.token = token.token;
+    user.token = token;
   }
 
   Future logout() async {

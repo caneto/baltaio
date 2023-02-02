@@ -54,7 +54,7 @@ class TodoRepository {
         .toList();
   }
 
-  Future<TodoItem> add(TodoItem item) async {
+  Future<TodoItem?> add(TodoItem item) async {
     var url = "https://10.0.2.2:5001/v1/todos";
 
     try {
@@ -71,7 +71,7 @@ class TodoRepository {
     }
   }
 
-  Future<TodoItem> markAsDone(TodoItem item) async {
+  Future<TodoItem?> markAsDone(TodoItem item) async {
     var url = "https://10.0.2.2:5001/v1/todos/mark-as-done";
 
     try {

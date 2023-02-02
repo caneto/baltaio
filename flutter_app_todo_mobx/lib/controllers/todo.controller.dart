@@ -3,13 +3,13 @@ import 'package:todo/repositories/todo.repository.dart';
 import 'package:todo/stores/app.store.dart';
 
 class TodoController {
-  AppStore _store;
-  TodoRepository _repository;
+  final AppStore _store;
+  final TodoRepository _repository;
 
-  TodoController(AppStore store) {
-    _store = store;
-    _repository = new TodoRepository();
-  }
+  TodoController({required AppStore store, required TodoRepository repository}) : 
+    _store = store,
+    _repository = repository,
+    super();
 
   void changeSelection(String selection) {
     _store.clearTodos();
