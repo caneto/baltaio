@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:todo/components/button.widget.dart';
 import 'package:todo/controllers/todo.controller.dart';
 import 'package:todo/models/todo-item.model.dart';
+import 'package:todo/repositories/todo.repository.dart';
 import 'package:todo/stores/app.store.dart';
 import 'package:todo/widgets/user-card.widget.dart';
 import 'home.view.dart';
@@ -40,7 +41,8 @@ class _CreateTodoViewState extends State<CreateTodoView> {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<AppStore>(context);
-    final controller = new TodoController(store);
+    final repository = TodoRepository();
+    final controller = TodoController(store: store, repository: repository);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -114,7 +116,7 @@ class _CreateTodoViewState extends State<CreateTodoView> {
                   }
 
                   _formKey.currentState!.save();
-                  var todo = new TodoItem(
+                  var todo = TodoItem(
                     title: task,
                     date: date,
                   );

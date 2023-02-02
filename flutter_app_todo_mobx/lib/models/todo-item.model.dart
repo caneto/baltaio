@@ -2,12 +2,12 @@
 import 'dart:convert';
 
 class TodoItem {
-  final String id;
+  final String? id;
   final String title;
-  final bool done;
+  final bool? done;
   final DateTime date; // Alterado
 
-  TodoItem({required this.id, required this.title, required this.done, required this.date});
+  TodoItem({this.id, required this.title, this.done, required this.date});
 
   Map<String, dynamic> toMap() {
     return <String, dynamic>{
