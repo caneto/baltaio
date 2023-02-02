@@ -3,6 +3,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.controller.dart';
+import 'package:todo/repositories/todo.repository.dart';
 import 'package:todo/stores/app.store.dart';
 import 'package:todo/widgets/busy.widget.dart';
 
@@ -12,7 +13,8 @@ class TodoList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<AppStore>(context);
-    final controller = new TodoController(store);
+    final repository = TodoRepository();
+    final controller = TodoController(store: store, repository: repository);
 
     return Observer(
       builder: (_) => TDBusy(
@@ -34,7 +36,7 @@ class TodoList extends StatelessWidget {
                       todo.title,
                       style: TextStyle(
                         fontSize: 18,
-                        color: todo.done
+                        color: todo.done!
                             ? Colors.black.withOpacity(0.2)
                             : Colors.black,
                       ),

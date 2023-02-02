@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/controllers/todo.controller.dart';
+import 'package:todo/repositories/todo.repository.dart';
 import 'package:todo/stores/app.store.dart';
 
 class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final store = Provider.of<AppStore>(context);
-    final controller = new TodoController(store);
+    final repository = TodoRepository();
+    final controller = TodoController(store: store, repository: repository);
 
     return Container(
       width: double.infinity,

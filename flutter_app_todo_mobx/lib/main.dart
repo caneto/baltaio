@@ -1,10 +1,13 @@
 import 'dart:io';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo/stores/app.store.dart';
 import 'package:todo/themes/app.theme.dart';
 import 'package:todo/views/login.view.dart';
+
+import 'firebase_options.dart';
 
 // Esta classe permite acesso ao LocalHost com certificados HTTPS inválidos
 class MyHttpOverrides extends HttpOverrides {
@@ -17,7 +20,12 @@ class MyHttpOverrides extends HttpOverrides {
   }
 }
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   HttpOverrides.global = new MyHttpOverrides();
   runApp(MyApp());
 }
