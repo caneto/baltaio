@@ -9,59 +9,62 @@ class UserCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(
-        top: 40,
-      ),
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: new ExactAssetImage("assets/images/notification.png"),
-          fit: BoxFit.cover,
-          alignment: Alignment.bottomCenter,
+    return Padding(
+      padding: const EdgeInsets.only(top:39),
+      child: Container(
+        padding: EdgeInsets.only(
+          top: 40,
         ),
-      ),
-      width: double.infinity,
-      alignment: Alignment.center,
-      child: Column(
-        children: <Widget>[
-          TDAvatar(
-            width: 80,
-            path: user.picture,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: new ExactAssetImage("assets/images/notification.png"),
+            fit: BoxFit.cover,
+            alignment: Alignment.bottomCenter,
           ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            user.name,
-            style: TextStyle(
-              color: Colors.white,
+        ),
+        width: double.infinity,
+        alignment: Alignment.center,
+        child: Column(
+          children: <Widget>[
+            TDAvatar(
+              width: 80,
+              path: user.picture,
             ),
-          ),
-          Container(
-            height: 20,
-            child: TextButton(
-              child: Text(
-                "Sair",
-                style: TextStyle(
-                  color: Colors.white,
-                ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              user.name,
+              style: TextStyle(
+                color: Colors.white,
               ),
-              onPressed: () {
-                controller.logout().then((data) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginView(),
-                    ),
-                  );
-                }); // TRATAR POSSÍVEL ERRO
-              },
             ),
-          ),
-          SizedBox(
-            height: 40,
-          ),
-        ],
+            Container(
+              height: 20,
+              child: TextButton(
+                child: Text(
+                  "Sair",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onPressed: () {
+                  controller.logout().then((data) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginView(),
+                      ),
+                    );
+                  }); // TRATAR POSSÍVEL ERRO
+                },
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -23,6 +23,9 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: <Widget>[
+          const SizedBox(
+             height: 11,
+          ),
           UserCard(),
           Navbar(),
           Expanded(

@@ -63,6 +63,7 @@ class _LoginViewState extends State<LoginView> {
               child: Column(
                 children: <Widget>[
                   SizedBox(
+                    height: 12,
                     width: double.infinity,
                   ),
                   Image.asset(
